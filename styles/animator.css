@@ -1,8 +1,6 @@
-@charset "UTF-8";
 body {
   font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑,
     SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif";
-  background: #000;
 }
 ul {
   list-style: none;
@@ -16,7 +14,7 @@ ul {
   text-align: center;
   overflow: hidden;
   font-size: 20px;
-  color: #ddd;
+  color: black;
 }
 .select-wrap:before,
 .select-wrap:after {
@@ -29,19 +27,19 @@ ul {
 }
 .select-wrap:before {
   top: 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
-    rgba(1, 1, 1, 0.5),
-    rgba(1, 1, 1, 0)
-  );
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 1)
+  ); */
 }
 .select-wrap:after {
   bottom: 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
-    rgba(1, 1, 1, 0.5),
-    rgba(1, 1, 1, 0)
-  );
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 1)
+  ); */
 }
 .select-wrap .select-options {
   position: absolute;
@@ -54,14 +52,14 @@ ul {
   display: block;
   transform: translateZ(-150px) rotateX(0deg);
   -webkit-font-smoothing: subpixel-antialiased;
-  color: #666;
+  color: black;
 }
 .select-wrap .select-options .select-option {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 200px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .select-wrap .select-options .select-option:nth-child(1) {
@@ -366,16 +364,42 @@ ul {
 }
 
 .highlight {
+  --content-width: 1280px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   width: 100%;
-  background-color: #000;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  background-color: white;
+  /* border-top: 1px solid #333;
+  border-bottom: 1px solid #333; */
+  font-weight: bolder;
   font-size: 24px;
   overflow: hidden;
 }
+
+/* .highlight::before {
+  content: "\F285";
+  position: absolute;
+  font-family: "bootstrap-icons";
+  left: calc(var(--content-width) / 2.5);
+  top: 0;
+  font-size: 40px;
+  font-weight: bolder;
+  width: 40px;
+  height: 40px;
+}
+
+.highlight::after {
+  content: "\F284";
+  position: absolute;
+  font-family: "bootstrap-icons";
+  right: calc(var(--content-width) / 2.5);
+  top: 0;
+  font-size: 40px;
+  font-weight: bolder;
+  width: 40px;
+  height: 40px;
+} */
 
 .highlight-list {
   position: absolute;
@@ -384,16 +408,16 @@ ul {
 
 /* date */
 .user-selector {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   perspective: 2000px;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: 400px;
 }
 .user-selector > div {
   flex: 1;

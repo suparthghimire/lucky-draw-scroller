@@ -1,15 +1,11 @@
 import Animator from "./animator.js";
+import { showConfetti } from "./confetti.js";
 
-const button = document.querySelector("#choose-user");
+const audio = new Audio("../assets/sounds/win.mp3");
 
-const exampleModal = new bootstrap.Modal(
-  document.getElementById("exampleModal")
-);
-
-console.log(exampleModal);
-exampleModal.show();
-
-let currentUser = 100;
+const chooseUserBtn = document.querySelector("#choose-user");
+let currentUser = 0;
+const winModal = new bootstrap.Modal(document.getElementById("winModal"));
 
 /**
  * @typedef {Object} User
@@ -75,13 +71,14 @@ async function init() {
     el: "#user1",
     type: "infinite",
     source: users,
+    disableTouch: true,
     count: 20,
     onChange: (selected) => {
       currentUser = selected.value;
     },
   });
 
-  button.addEventListener("click", async () => {
+  chooseUserBtn.addEventListener("click", async () => {
     const winner = await getWinner();
 
     const winnerIdx = users.findIndex((user, idx) => user.id === winner.id);
@@ -92,14 +89,18 @@ async function init() {
     }
 
     userSelector.scrollToIndex(winnerIdx).then(() => {
-      console.log("Scrolled to winner");
-      const exampleModal = new bootstrap.Modal(
-        document.getElementById("exampleModal")
-      );
-
-      console.log(exampleModal);
-      exampleModal.show();
+      winModal.show();
+      showConfetti("emoji");
+      const winnerNameSpan = document.querySelector("#winner-username");
+      winnerNameSpan.textContent = winner.name;
+      audio.play();
     });
+  });
+
+  // Reset the user selector when the modal is hidden
+  winModal._element.addEventListener("hidden.bs.modal", () => {
+    userSelector.scrollToIndex(0);
+    audio.pause();
   });
 }
 

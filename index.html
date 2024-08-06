@@ -7,67 +7,209 @@
     <link rel="stylesheet" href="https://snppasal.com/assets/css/vendors.css" />
     <link
       rel="stylesheet"
+      href="https://snppasal.com/assets/css/aiz-core.css?v=1558"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI="
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/animator.css" />
-    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
   </head>
-  <body>
-    <div class="user-selector">
-      <div class="user" id="user1"></div>
-    </div>
-    <button id="choose-user" class="btn btn-primary">Choose User</button>
-
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-light">
-          <div class="modal-header border-bottom-0">
-            <h3 class="" id="exampleModalLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="bi bi-x-lg text-light"></i>
+  <body class="vh-100 border-5 p-5">
+    <div class="h-100" style="display: grid; grid-template-rows: auto 1fr">
+      <header class="row" style="height: fit-content">
+        <div class="col-3">
+          <a class="d-block py-20px mr-3 ml-0" href="https://snppasal.com">
+            <img
+              src="https://snppasal.com/uploads/all/P57yvI1dFfNZOtf0AiufTlPgTYAYgaur8hx5xQ36.png"
+              alt="SNP Pasal"
+              class="mw-100 h-30px h-md-40px"
+              height="40"
+            />
+          </a>
+        </div>
+        <div class="col-6">
+          <h1 class="text-center fw-bolder">Title of Lucky Draw</h1>
+        </div>
+        <div class="col-3"></div>
+      </header>
+      <main class="row mt-5">
+        <section class="col-3">
+          <div class="card h-100 rounded-3 relative overflow-hidden">
+            <img
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+              class="absolute w-100 h-100"
+              style="object-fit: cover"
+            />
+          </div>
+        </section>
+        <section class="col-6 h-100">
+          <div class="card rounded-3 h-100 p-4 lucky-draw-container">
+            <div class="lucky-draw-cards">
+              <div class="card w-100 rounded-3">
+                <h5 class="card-header">Total Users</h5>
+                <div class="card-body">
+                  <h5 class="card-text">150</h5>
+                </div>
+              </div>
+              <div class="card w-100 rounded-3">
+                <h5 class="card-header">Total Winners</h5>
+                <div class="card-body">
+                  <h5 class="card-text">150</h5>
+                </div>
+              </div>
+            </div>
+            <div class="h-100 lucky-draw-wrapper">
+              <div class="user-selector">
+                <div class="user" id="user1"></div>
+              </div>
+            </div>
+            <button id="choose-user" class="btn btn-primary w-fit draw-btn">
+              Draw
             </button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer border-top-0">
+        </section>
+        <section class="col-3">
+          <div class="card h-100 rounded-3 p-4">
+            <h3 class="text-center">Winners</h3>
+            <ul class="pr-1 mt-5 h-100 winner-list">
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+              <li class="card p-3 rounded-2 winner-item">
+                <img
+                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                />
+                <div class="winner-info">
+                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                  <p class="text-muted mb-0">
+                    shreekrishnalamichhane2015@gmail.com
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div
+      data-backdrop="false"
+      class="modal fade"
+      id="winModal"
+      tabindex="-1"
+      aria-labelledby="winModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered custom-modal-width">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title strong-600 heading-5">
+              Congratulations
+              <span id="winner-username"></span>
+            </h5>
+
             <button
               type="button"
-              class="btn btn-secondary"
+              class="close"
+              aria-label="Close"
+              id="close-btn-icon"
               data-bs-dismiss="modal"
             >
-              Close
+              <span aria-hidden="true" class="text-black">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                  />
+                </svg>
+              </span>
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+          <div class="modal-body px-3 pt-3">
+            <p class="lead">
+              You have won the lucky draw. Please contact the admin to claim
+              your prize.
+            </p>
+            <div class="text-right mt-4">
+              <button
+                type="button"
+                class="btn btn-secondary rounded-0 w-150px"
+                data-bs-dismiss="modal"
+                id="close-btn-lg"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+
+  <!-- https://github.com/catdad/canvas-confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

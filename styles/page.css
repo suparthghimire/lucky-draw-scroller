@@ -1,0 +1,58 @@
+.winner-list {
+  max-height: 630px;
+  overflow: auto;
+}
+.winner-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.winner-item > img {
+  width: 70px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.winner-info {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.winner-info > * {
+  word-break: break-all;
+}
+
+.lucky-draw-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lucky-draw-container > button {
+  margin-top: auto;
+}
+
+.lucky-draw-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.lucky-draw-cards {
+  display: flex;
+  gap: 12px;
+}
+
+.draw-btn {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.custom-modal-width {
+  max-width: 600px !important;
+}

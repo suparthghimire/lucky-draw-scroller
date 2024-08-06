@@ -9,6 +9,8 @@ const easing = {
 
 export default class Animator {
   constructor(options) {
+    this.disableTouchControls = options.disableTouchControls;
+
     let defaults = {
       el: "", // DOM element
       type: "infinite", // infinite (infinite scrolling), normal (non-infinite)
@@ -88,6 +90,7 @@ export default class Animator {
   }
 
   _touchstart(e, touchData) {
+    if (this.disableTouchControls) return;
     this.elems.el.addEventListener("touchmove", this.events.touchmove);
     document.addEventListener("mousemove", this.events.touchmove);
     let eventY = e.clientY || e.touches[0].clientY;
@@ -98,6 +101,9 @@ export default class Animator {
   }
 
   _touchmove(e, touchData) {
+    console.log("touchmove", this.disableTouchControls);
+    if (this.disableTouchControls) return;
+
     let eventY = e.clientY || e.touches[0].clientY;
     touchData.yArr.push([eventY, new Date().getTime()]);
     if (touchData.length > 5) {
@@ -123,6 +129,8 @@ export default class Animator {
   }
 
   _touchend(e, touchData) {
+    if (this.disableTouchControls) return;
+
     this.elems.el.removeEventListener("touchmove", this.events.touchmove);
     document.removeEventListener("mousemove", this.events.touchmove);
 
