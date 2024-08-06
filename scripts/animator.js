@@ -7,7 +7,7 @@ const easing = {
   },
 };
 
-export default class Selector {
+export default class Animator {
   constructor(options) {
     let defaults = {
       el: "", // DOM element

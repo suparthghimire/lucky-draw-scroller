@@ -1,6 +1,13 @@
-import Selector from "./selector.js";
+import Animator from "./animator.js";
 
 const button = document.querySelector("#choose-user");
+
+const exampleModal = new bootstrap.Modal(
+  document.getElementById("exampleModal")
+);
+
+console.log(exampleModal);
+exampleModal.show();
 
 let currentUser = 100;
 
@@ -64,7 +71,7 @@ async function getWinner() {
 
 async function init() {
   const { users } = await getUsers();
-  const userSelector = new Selector({
+  const userSelector = new Animator({
     el: "#user1",
     type: "infinite",
     source: users,
@@ -86,6 +93,12 @@ async function init() {
 
     userSelector.scrollToIndex(winnerIdx).then(() => {
       console.log("Scrolled to winner");
+      const exampleModal = new bootstrap.Modal(
+        document.getElementById("exampleModal")
+      );
+
+      console.log(exampleModal);
+      exampleModal.show();
     });
   });
 }
