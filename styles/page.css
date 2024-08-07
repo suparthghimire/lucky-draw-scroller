@@ -1,17 +1,27 @@
+.logo {
+  width: 120px;
+}
+.page-header {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
 .winner-list {
-  max-height: 630px;
+  max-height: calc(100vh - 350px);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .winner-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 12px;
 }
 
 .winner-item > img {
-  width: 70px;
+  width: 50px;
   flex-shrink: 0;
   border-radius: 50%;
   aspect-ratio: 1/1;
@@ -41,6 +51,7 @@
 .lucky-draw-wrapper {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .lucky-draw-cards {
@@ -48,11 +59,27 @@
   gap: 12px;
 }
 
-.draw-btn {
-  width: fit-content;
-  margin: 0 auto;
+.mid-content-row {
+  height: calc(100% - 135px);
 }
 
+.mid-content-row .card .card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.draw-btn-container {
+  display: grid;
+  place-items: center;
+  margin-top: auto;
+}
 .custom-modal-width {
-  max-width: 600px !important;
+  max-width: 700px !important;
+}
+
+.winner-img {
+  aspect-ratio: 1/1;
+  width: 120px;
+  border-radius: 50%;
 }

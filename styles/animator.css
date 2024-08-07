@@ -2,6 +2,10 @@ body {
   font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑,
     SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif";
 }
+:root {
+  --item-font-size: 1.5rem;
+  --item-font-size-highlight: 1.5rem;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -61,6 +65,7 @@ ul {
   width: 100%;
   height: 200px;
   -webkit-font-smoothing: subpixel-antialiased;
+  font-size: var(--item-font-size);
 }
 .select-wrap .select-options .select-option:nth-child(1) {
   transform: rotateX(0deg) translateZ(150px);
@@ -370,20 +375,26 @@ ul {
   transform: translate(0, -50%);
   width: 100%;
   background-color: white;
-  /* border-top: 1px solid #333;
-  border-bottom: 1px solid #333; */
+
+  color: var(--primary);
+  border: 3px solid var(--primary);
+
+  /* border-bottom: 1px solid #333; */
+  border-radius: 10px;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: var(--item-font-size-highlight);
   overflow: hidden;
 }
 
-/* .highlight::before {
+.highlight::before {
   content: "\F285";
   position: absolute;
   font-family: "bootstrap-icons";
-  left: calc(var(--content-width) / 2.5);
+  left: 0;
+  /* left: calc(var(--content-width) / 2.5); */
+  color: var(--primary);
   top: 0;
-  font-size: 40px;
+  font-size: 1.125em;
   font-weight: bolder;
   width: 40px;
   height: 40px;
@@ -393,13 +404,15 @@ ul {
   content: "\F284";
   position: absolute;
   font-family: "bootstrap-icons";
-  right: calc(var(--content-width) / 2.5);
+  /* right: calc(var(--content-width) / 2.5); */
+  color: var(--primary);
+  right: 0;
   top: 0;
-  font-size: 40px;
+  font-size: 1.125em;
   font-weight: bolder;
   width: 40px;
   height: 40px;
-} */
+}
 
 .highlight-list {
   position: absolute;
@@ -408,6 +421,7 @@ ul {
 
 /* date */
 .user-selector {
+  pointer-events: none;
   /* position: absolute;
   left: 50%;
   top: 50%;
@@ -417,14 +431,14 @@ ul {
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  height: 400px;
+  height: 350px;
 }
 .user-selector > div {
   flex: 1;
 }
 .user-selector .select-wrap {
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 .user-selector .highlight {
-  font-size: 20px;
+  /* font-size: 20px; */
 }

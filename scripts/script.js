@@ -4,9 +4,7 @@ import { showConfetti } from "./confetti.js";
 const audio = new Audio("../assets/sounds/win.mp3");
 
 const chooseUserBtn = document.querySelector("#choose-user");
-let currentUser = 0;
 const winModal = new bootstrap.Modal(document.getElementById("winModal"));
-
 /**
  * @typedef {Object} User
  * @property {string} id - The unique identifier for the user.
@@ -50,6 +48,7 @@ async function getUsers() {
  * @typedef {Object} Winner
  * @property {string} id
  * @property {string} name
+ * @property {string} email
  * @property {string} avatar
  */
 
@@ -73,9 +72,6 @@ async function init() {
     source: users,
     disableTouch: true,
     count: 20,
-    onChange: (selected) => {
-      currentUser = selected.value;
-    },
   });
 
   chooseUserBtn.addEventListener("click", async () => {
@@ -90,9 +86,14 @@ async function init() {
 
     userSelector.scrollToIndex(winnerIdx).then(() => {
       winModal.show();
-      showConfetti("emoji");
-      const winnerNameSpan = document.querySelector("#winner-username");
-      winnerNameSpan.textContent = winner.name;
+      showConfetti("firework");
+      const winnerNameEl = document.querySelector("#winner-name");
+      const winnerEmailEl = document.querySelector("#winner-email");
+      const winnerAvatarEl = document.querySelector("#winner-avatar");
+      winnerNameEl.textContent = winner.name;
+      winnerEmailEl.textContent = winner.email;
+      winnerAvatarEl.src = winner.avatar;
+
       audio.play();
     });
   });
@@ -101,6 +102,7 @@ async function init() {
   winModal._element.addEventListener("hidden.bs.modal", () => {
     userSelector.scrollToIndex(0);
     audio.pause();
+    audio.currentTime = 0;
   });
 }
 

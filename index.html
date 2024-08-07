@@ -23,21 +23,22 @@
     <div class="h-100" style="display: grid; grid-template-rows: auto 1fr">
       <header class="row" style="height: fit-content">
         <div class="col-3">
-          <a class="d-block py-20px mr-3 ml-0" href="https://snppasal.com">
+          <a class="d-block" href="https://snppasal.com">
             <img
               src="https://snppasal.com/uploads/all/P57yvI1dFfNZOtf0AiufTlPgTYAYgaur8hx5xQ36.png"
               alt="SNP Pasal"
-              class="mw-100 h-30px h-md-40px"
-              height="40"
+              class="logo"
             />
           </a>
         </div>
         <div class="col-6">
-          <h1 class="text-center fw-bolder">Title of Lucky Draw</h1>
+          <h1 class="page-header text-primary text-center font-weight-bolder">
+            Dashain Dhamaka - 2080
+          </h1>
         </div>
         <div class="col-3"></div>
       </header>
-      <main class="row mt-5">
+      <main class="row pt-5">
         <section class="col-3">
           <div class="card h-100 rounded-3 relative overflow-hidden">
             <img
@@ -47,103 +48,273 @@
             />
           </div>
         </section>
-        <section class="col-6 h-100">
-          <div class="card rounded-3 h-100 p-4 lucky-draw-container">
-            <div class="lucky-draw-cards">
+        <section class="col-6">
+          <div class="row">
+            <div class="col-6">
               <div class="card w-100 rounded-3">
-                <h5 class="card-header">Total Users</h5>
+                <h5 class="card-header text-primary">Total Users</h5>
                 <div class="card-body">
-                  <h5 class="card-text">150</h5>
-                </div>
-              </div>
-              <div class="card w-100 rounded-3">
-                <h5 class="card-header">Total Winners</h5>
-                <div class="card-body">
-                  <h5 class="card-text">150</h5>
+                  <h5 class="card-text font-weight-bold">150</h5>
                 </div>
               </div>
             </div>
-            <div class="h-100 lucky-draw-wrapper">
-              <div class="user-selector">
-                <div class="user" id="user1"></div>
+            <div class="col-6">
+              <div class="card w-100 rounded-3">
+                <h5 class="card-header text-primary">Total Winners</h5>
+                <div class="card-body">
+                  <h5 class="card-text font-weight-bold">150</h5>
+                </div>
               </div>
             </div>
-            <button id="choose-user" class="btn btn-primary w-fit draw-btn">
-              Draw
-            </button>
+          </div>
+          <div class="row mid-content-row">
+            <div class="col-12 h-100">
+              <div class="card h-100 w-full rounded-3">
+                <div class="card-content p-4">
+                  <div class="lucky-draw-wrapper">
+                    <div class="user-selector">
+                      <div class="user" id="user1"></div>
+                    </div>
+                  </div>
+                  <div class="draw-btn-container">
+                    <button
+                      id="choose-user"
+                      class="btn btn-primary btn-lg w-fit draw-btn"
+                    >
+                      Draw
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
         <section class="col-3">
-          <div class="card h-100 rounded-3 p-4">
-            <h3 class="text-center">Winners</h3>
-            <ul class="pr-1 mt-5 h-100 winner-list">
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-              <li class="card p-3 rounded-2 winner-item">
-                <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
-                />
-                <div class="winner-info">
-                  <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
-                  <p class="text-muted mb-0">
-                    shreekrishnalamichhane2015@gmail.com
-                  </p>
-                </div>
-              </li>
-            </ul>
+          <div class="card h-100 rounded-3">
+            <div class="card-header p-4">
+              <h4 class="font-weight-bold text-primary">Winners</h4>
+            </div>
+            <div class="card-body">
+              <ul class="pr-1 h-100 winner-list">
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+                <li class="winner-item">
+                  <img
+                    src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                  />
+                  <div class="winner-info">
+                    <h5 class="fw-bolder mb-0">Shree Krishna Lamichhane</h5>
+                    <p class="text-muted mb-0">shree****2014@gmail.com</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
@@ -158,44 +329,29 @@
     >
       <div class="modal-dialog modal-dialog-centered custom-modal-width">
         <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title strong-600 heading-5">
-              Congratulations
-              <span id="winner-username"></span>
+          <div class="modal-body">
+            <h4 class="text-center font-weight-bolder text-primary py-5 mb-3">
+              🎉 Congratulations 🎉
+            </h4>
+            <div class="text-center">
+              <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ae019946548423.5889caa0edaab.jpg"
+                alt="Winner"
+                class="winner-img"
+                id="winner-avatar"
+              />
+            </div>
+            <h5 class="text-center mt-3 font-weight-bold" id="winner-name">
+              Tori laure
             </h5>
-
-            <button
-              type="button"
-              class="close"
-              aria-label="Close"
-              id="close-btn-icon"
-              data-bs-dismiss="modal"
-            >
-              <span aria-hidden="true" class="text-black">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-x-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-          <div class="modal-body px-3 pt-3">
-            <p class="lead">
-              You have won the lucky draw. Please contact the admin to claim
-              your prize.
+            <p class="text-center text-muted" id="winner-email">
+              torilaure42069@gmail.com
             </p>
+
             <div class="text-right mt-4">
               <button
                 type="button"
-                class="btn btn-secondary rounded-0 w-150px"
+                class="btn btn-primary"
                 data-bs-dismiss="modal"
                 id="close-btn-lg"
               >
